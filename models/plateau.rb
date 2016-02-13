@@ -1,4 +1,4 @@
-require './robot.rb'
+require_relative './robot.rb'
 
 # Plateau class represents the rectangular area of mars
 # The area is formed by (botttom-left, bottom-right) and (top-left, top-right) coordinates.

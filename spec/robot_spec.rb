@@ -1,4 +1,4 @@
-require_relative '../robot.rb'
+require_relative '../models/robot.rb'
 
 describe Robot do
   describe 'initialize' do

@@ -1,4 +1,4 @@
-require './plateau.rb'
+require './models/plateau.rb'
 
 system('clear')
 puts 'Welcome to the Mars Mission.'
@@ -14,6 +14,7 @@ rescue => exc
   exit(0)
 end
 
+puts ''
 print 'Enter the number of robots you want to deploy: '
 total_robots = gets.to_i
 rovers = []
@@ -21,7 +22,7 @@ rovers = []
 total_robots.times do
   puts ''
   print 'Enter the position to deploy the Robot in \'x y direction\' format(eg: 1 2 N): '
-  robot_coord = gets.split(/\s/)
+  robot_coord = gets.split(/\s/).reject { |val| val.to_s.strip == '' }
   rx, ry, rd = robot_coord[0..2]
 
   robot = plateau.deploy(rx, ry, rd)
@@ -33,11 +34,11 @@ total_robots.times do
   rovers << [robot, robot_moves]
 end
 
-rovers.each do |rover|
+rovers.each_with_index do |rover, index|
   robot, moves = rover
   moves.each { |cmd| robot.move(cmd) }
 
   puts ''
-  print 'Current Position of the robot is: ' + robot.current_position
+  print "Position of robot #{ index + 1 } is: #{ robot.current_position }"
   puts ''
 end

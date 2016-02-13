@@ -1,4 +1,4 @@
-require_relative '../plateau.rb'
+require_relative '../models/plateau.rb'
 
 describe Plateau do
   describe 'initialize' do
