@@ -33,12 +33,12 @@ describe Robot do
 
       it 'move(R) should change its direction to West' do
         robot.move('R')
-        expect(robot.position).to eq 'W'
+        expect(robot.direction).to eq 'W'
       end
 
       it 'move(L) should change its direction to East' do
         robot.move('L')
-        expect(robot.position).to eq 'E'
+        expect(robot.direction).to eq 'E'
       end
 
       it 'move(M) should increment the y coordinate' do
@@ -52,12 +52,12 @@ describe Robot do
 
       it 'move(R) should change its direction to South' do
         robot.move('R')
-        expect(robot.position).to eq 'S'
+        expect(robot.direction).to eq 'S'
       end
 
       it 'move(L) should change its direction to North' do
         robot.move('L')
-        expect(robot.position).to eq 'N'
+        expect(robot.direction).to eq 'N'
       end
 
       it 'move(M) should increment the x coordinate' do
@@ -71,12 +71,12 @@ describe Robot do
 
       it 'move(R) should change its direction to East' do
         robot.move('R')
-        expect(robot.position).to eq 'E'
+        expect(robot.direction).to eq 'E'
       end
 
       it 'move(L) should change its direction to West' do
         robot.move('L')
-        expect(robot.position).to eq 'W'
+        expect(robot.direction).to eq 'W'
       end
 
       it 'move(M) should decrement the y coordinate' do
@@ -90,12 +90,12 @@ describe Robot do
 
       it 'move(R) should change its direction to North' do
         robot.move('R')
-        expect(robot.position).to eq 'N'
+        expect(robot.direction).to eq 'N'
       end
 
       it 'move(L) should change its direction to South' do
         robot.move('L')
-        expect(robot.position).to eq 'S'
+        expect(robot.direction).to eq 'S'
       end
 
       it 'move(M) should decrement the x coordinate' do
